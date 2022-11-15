@@ -1,22 +1,21 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-//321 123 -321 -123 1234 0
+        a(76545);
     }
-    public static void a (int b){
-        int[] a={1,2,3,4,5};
+
+    public static void a(int a) {
         int r = 0;
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a.length; j++) {
-                if (a[i] > a[j]) {
-                    r = a[i];
-                    a[i] = a[j];
-                    a[j] = r;
-                }
+        if (a > 999 && a > -999) {
+            System.out.println(0);
+        }else {
+            while (a != 0) {
+                int s = a % 10;
+                r = r * 10 + s;
+                a /= 10;
             }
         }
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i] + " ");
-        }
+            System.out.println(r);
     }
 }
-
